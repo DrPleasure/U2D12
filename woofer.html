@@ -60,6 +60,15 @@
     />
 
     <style>
+      input {
+        padding: 10px;
+        border: 1px solid #ddd;
+        background: #f9fafc;
+        width: 40%;
+        font-size: 1.5rem;
+        margin-left: 25%;
+      }
+
       .jumbotron {
         padding-top: 3rem;
         padding-bottom: 3rem;
@@ -196,6 +205,13 @@
               >Load Secondary Images</a
             >
           </p>
+          <div class="d-flex justify-content-center">
+            <input
+              type="text"
+              class="input"
+              placeholder="Search for Images🔎"
+            />
+          </div>
         </div>
       </section>
 
@@ -646,7 +662,8 @@
     ></script>
     <script>
       let loadPrimaryCards = () => {
-        fetch("https://api.pexels.com/v1/search?query=dogs", {
+        alert("15 images loaded");
+        fetch("https://api.pexels.com/v1/search?query=depression", {
           headers: {
             Authorization:
               "563492ad6f917000010000015c7763f9de3246d494020eb7f005625d",
@@ -694,6 +711,7 @@
           });
       };
       let loadSecondaryCards = () => {
+        alert("15 images loaded");
         fetch("https://api.pexels.com/v1/search?query=defeat", {
           headers: {
             Authorization:
